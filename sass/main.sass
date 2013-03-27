@@ -1,0 +1,123 @@
+// mixins
+
+=inline
+  display: inline
+
+=right
+  float: right
+
+=right_cleared
+  +right
+  &:after
+    content: ""
+  &:after
+    clear: both
+
+=hidden
+  display: none
+
+=bg($bg) // why bg? because background is too long/hard to type ^^
+  background: $bg
+
+=padding($type)
+  // TODO: if $type == "box" ...
+  @if $type == "box"
+    padding: 20px 2%
+  @else
+    padding: 5px 12px
+
+=margin($type)
+  // TODO: see =padding()
+  margin: 20px 0
+
+=rounded($amount)
+  // FIXME: browser fallbacks
+  border-radius: $amount
+
+// resets
+
+a
+  text-decoration: none
+
+
+// colors
+
+$main: #A00
+$main: #271
+
+// style
+
+body
+  font-family: Georgia, sans-serif
+  background: #FFF
+  margin: 0
+  padding: 0
+
+.content
+  margin: 0 auto
+  width: 90%
+  max-width: 1100px
+
+a
+  color: $main
+  text-shadow: -1px 0px 1px #EEE
+  font-weight: bold
+  &:hover
+    color: $main + #222
+    text-shadow: 1px 1px 0px #FFF
+
+p
+  line-height: 1em
+
+#container > header
+  padding: 5px 12px
+  width: 11em
+  +rounded(10px)
+  background: #EEE
+  & > h1
+    margin: 0
+    font-size: 1.2em
+    span
+      font-size: 0.8em
+      display: block
+
+#container > nav
+  margin: 18px 0 10px
+
+
+
+=button
+  +bg(#FFF)
+  +padding("button")
+  +rounded(10px)
+  border: 1px solid #CCC
+  margin-right: 1%
+  font-weight: bold
+  &:hover
+    +bg(#EEE)
+    border: 1px solid #999
+
+.btn
+  +button
+
+nav a
+  +button
+
+// pages
+
+
+.item
+  img
+    width: 33%
+
+
+// other
+
+#debug
+  +hidden
+  +bg(#FFF)
+  +padding("box")
+  +right
+a.debug
+  +margin("slanted")
+  +right

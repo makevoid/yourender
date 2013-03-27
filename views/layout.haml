@@ -1,0 +1,25 @@
+!!! 5
+%html
+  - TITLE = "Yourender"
+  %head
+    %title= TITLE
+    %link{ rel: "stylesheet", href: "/css/main.css" }
+    = partial :metas
+
+  %body
+    #container
+      %header
+        %h1= TITLE
+      %nav
+      %section.content
+
+        = yield
+
+        - if DEBUG
+          %a.debug{ href: "javascript:void(0)", onclick: "$('#debug').toggle()" } [-]
+          #debug
+            %h1 Debug
+            = paypal
+      
+      
+    %script{ type: "text/javascript", src: "/js/app.js" }
