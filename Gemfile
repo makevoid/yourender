@@ -8,6 +8,10 @@ gem "json"
 # gem "dm-migrations"
 
 gem "haml"
+gem "haml-contrib"
+# gem "maruku"
+gem "RedCloth"
+
 gem "sass"
 
 group :development do

@@ -1,4 +1,5 @@
 path = File.expand_path '../../', __FILE__
+PATH = path
 APP = "yourender"
 
 require "bundler/setup"
@@ -12,6 +13,11 @@ module Utils
 end
 include Utils
 
+require "#{path}/lib/translation"
+include Translation
+require "#{path}/lib/utils"
+include Utils
+
 env = ENV["RACK_ENV"] || "development"
 # DataMapper.setup :default, "mysql://localhost/yourender_#{env}"
 require_all "#{path}/models"
@@ -21,3 +27,4 @@ require_all "#{path}/models"
 # env
 
 DEBUG = true
+LANG = "it" # en
