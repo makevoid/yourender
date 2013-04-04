@@ -1,3 +1,48 @@
 = redcloth :home_it
 
+:textile
+  h1. Esempi di render:
+  
+  Test effettuati nell'Aprile 2013
+  
+  I render sono "open source":http://www.blender.org/features-gallery/blender-open-projects/ e sotto licenza creative commons [ "sintel":http://www.sintel.org/ ]
+  
+  
+  esempio di render:
+  
+  modello:
+  
+  http://www.blendswap.com/blends/view/67465
+
+/ http://uploads.makevoid.com/modernes_wohnzimmer.blend
+
+:textile 
+  istanza: c1.medium
+  software: blender
+  sistema operativo: windows
+  
+  
+  Tipi di istanze: http://aws.amazon.com/ec2/instance-types/
+  Prezzi: http://aws.amazon.com/ec2/pricing/
+
+
+%p Compra la guida - 10Euro
+
+%p Prezzo lancio
+
+%p Compra la guida e 2 ore di assistenza - 50Euro 
+
+- photos = Dir.glob("./public/img/*").reverse
+#bg
+  - photos.each do |photo|
+    %img{ src: "/img/#{File.basename photo}" }
+
 %a.btn Render it!
+
+
+%p Francesco Canessa
+%p Software Development
+%p PIVA 
+
+
+

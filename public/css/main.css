@@ -62,6 +62,11 @@ nav a {
     background: #eeeeee;
     border: 1px solid #999999; }
 
+#bg img {
+  width: 400px;
+  display: block;
+  padding: 5px; }
+
 .item img {
   width: 33%; }
 
