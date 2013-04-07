@@ -4,4 +4,5 @@ guard 'livereload' do
   watch(%r{views/.+.(erb|haml|slim|md|markdown)})
   watch(%r{public/css/.+.css})
   watch(%r{public/js/.+.js})
+  watch(%r{guides/.+.saf})
 end

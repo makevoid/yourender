@@ -4,7 +4,7 @@ require "#{path}/config/env.rb"
 
 class Yourender < Sinatra::Base
   include Voidtools::Sinatra::ViewHelpers
-  
+
   set :logging, true
   log = File.new "log/development.log", "a"
   STDOUT.reopen log
@@ -22,6 +22,20 @@ class Yourender < Sinatra::Base
     end
     haml "_#{name}".to_sym, locals: locals
   end
+
+  get "/" do
+    haml :index
+  end
+
+  get "/guide" do
+    haml :guide_main
+  end
+
+  get "/guides/*" do |name|
+    @name = name
+    haml :guide
+  end
+
 end
 
-require_all "#{path}/routes"
+# require_all "#{path}/routes"

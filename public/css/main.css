@@ -1,6 +1,9 @@
 a {
   text-decoration: none; }
 
+p {
+  line-height: 1.2em; }
+
 body {
   font-family: Georgia, sans-serif;
   background: #eeeeee;
@@ -10,7 +13,7 @@ body {
 #container {
   margin: 0 auto;
   width: 90%;
-  max-width: 1100px; }
+  max-width: 1000px; }
 
 a {
   color: #aa0000;
@@ -19,9 +22,6 @@ a {
   a:hover {
     color: #cc2222;
     text-shadow: 1px 1px 0px white; }
-
-p {
-  line-height: 1em; }
 
 #container > header {
   padding: 5px 12px;
@@ -37,6 +37,10 @@ p {
 
 #container > nav {
   margin: 18px 0 10px; }
+
+nav {
+  margin: 10px 0 0 0;
+  line-height: 32px; }
 
 .btn {
   background: white;
@@ -69,6 +73,22 @@ nav a {
 
 .item img {
   width: 33%; }
+
+.guide img {
+  width: 100%;
+  margin: 50px 0 10px;
+  box-shadow: 0 3px 10px #999999; }
+.guide p {
+  margin: 0; }
+
+.guide.create_ami img {
+  width: 110%;
+  position: relative;
+  left: -4%;
+  box-shadow: none; }
+
+.mini {
+  font-size: 0.8em; }
 
 #debug {
   display: none;

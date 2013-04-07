@@ -15,8 +15,12 @@ include Utils
 
 require "#{path}/lib/translation"
 include Translation
+require "#{path}/lib/labelize"
+include Labelize
 require "#{path}/lib/utils"
 include Utils
+require "#{path}/lib/simple_article_format"
+
 
 env = ENV["RACK_ENV"] || "development"
 # DataMapper.setup :default, "mysql://localhost/yourender_#{env}"

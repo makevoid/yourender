@@ -2,8 +2,18 @@ YouRender e' un metodo adatto se effettui render pesanti e non hai un computer p
 
 **YouRender** ti permette di renderizzare su server molto potenti, da subito!  
 
+h3. Cos'e' una Render Farm?
+
+E' uno o piu' computer remoti su cui lanciare dei render.
+
+h3. Come fare?
+
+Amazon e altri provider affittano dei computer, anche molto potenti, a consumo (orario) 
+
+
 h3. Il metodo YouRender consiste nel:
 
+- Registrarsi a AWS
 - *Lanciare un'istanza* di un server EC2
 - *Configurare* l'ambiente:
   - Installare programmi di base 
@@ -13,6 +23,11 @@ h3. Il metodo YouRender consiste nel:
 
 Il metodo attuale utilizza il servizio "Amazon EC2":http://aws.amazon.com/ec2/pricing/
 Il costo del servizio EC2, per un cluster di 2 server windows Intel Xeon X5570 (totale di 8 core fisici) a 2.9Ghz, 22GB di RAM, e due schede video NVIDIA Tesla M205, in europa e' di circa *2&euro; l'ora*.
+
+h3. Necessari per registrarsi al servizio AWS
+
+- Carta di credito
+- Telefono fisso o cellulare
 
 h3. Se ti e' gia' tutto chiaro, perfetto! Se invece vuoi farlo ma non sai come contattaci:
 

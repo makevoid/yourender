@@ -1,5 +1,24 @@
-http://www.microsoft.com/mac/remote-desktop-client
+%a.btn{ href: "/guide" } < indietro
 
-http://www.microsoft.com/en-us/download/search.aspx?q=microsoft%20remote%20desktop%20connection%20for%20mac&p=0&r=10&t=&s=Relevancy~Descending
+.guide{ class: @name }
 
-http://www.microsoft.com/en-us/download/details.aspx?id=18140
+  - dir = @name
+  - labels = Saf.load "./guides/#{dir}.saf"
+  - labels = labels.first
+
+  - screens = Dir.glob("./screenshots_src/#{dir}/*")
+  - screens.sort_by!{ |screen| File.basename(screen).to_i } #{ |screen| File.mtime screen }
+  - screens.each_with_index do |screen, idx|
+    - name = File.basename screen, ".*"
+    - path = "/screens/#{dir}/#{name}.png"
+    %img{ src: path }
+    %p.num #{name}. 
+    - label = labels[name.to_sym]
+    - if label
+      .text= label
+
+  http://www.microsoft.com/mac/remote-desktop-client
+
+  http://www.microsoft.com/en-us/download/search.aspx?q=microsoft%20remote%20desktop%20connection%20for%20mac&p=0&r=10&t=&s=Relevancy~Descending
+
+  http://www.microsoft.com/en-us/download/details.aspx?id=18140

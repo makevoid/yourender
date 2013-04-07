@@ -1,0 +1,14 @@
+%p Benvenuto nella guida YouRender:
+
+%p Ecco i passaggi necessari spiegati nel dettaglio:
+
+%nav
+  - guides = Dir.glob("guides/*")
+  - guides.each do |guide|
+    - guide_name = File.basename guide, ".saf"
+    %a.btn{ href: "/guides/#{guide_name}" }= label guide_name
+    
+.mini
+  :textile
+    **note:**
+    Se queste immagini sono troppo piccole allarga la finestra del browser.
