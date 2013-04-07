@@ -24,10 +24,10 @@ a {
     text-shadow: 1px 1px 0px white; }
 
 #container > header {
-  padding: 5px 12px;
   width: 13em;
   border-radius: 10px;
-  background: #eeeeee; }
+  background: #eeeeee;
+  margin: 10px 0 20px 0; }
   #container > header > h1 {
     margin: 0;
     font-size: 1.2em; }
@@ -36,13 +36,17 @@ a {
       display: block; }
 
 #container > nav {
-  margin: 18px 0 10px; }
+  margin: 18px 0 10px;
+  float: right; }
 
 nav {
   margin: 10px 0 0 0;
   line-height: 32px; }
 
-.btn {
+nav.user {
+  font-size: 0.7em; }
+
+.btn, nav a, input[type=submit] {
   background: white;
   padding: 5px 12px;
   border-radius: 10px;
@@ -50,21 +54,40 @@ nav {
   margin-right: 1%;
   font-weight: bold;
   cursor: pointer; }
-  .btn:hover {
+  .btn:hover, nav a:hover, input[type=submit]:hover {
     background: #eeeeee;
     border: 1px solid #999999; }
 
-nav a {
-  background: white;
-  padding: 5px 12px;
-  border-radius: 10px;
-  border: 1px solid #cccccc;
-  margin-right: 1%;
-  font-weight: bold;
-  cursor: pointer; }
-  nav a:hover {
-    background: #eeeeee;
-    border: 1px solid #999999; }
+input[type=submit] {
+  color: #aa0000;
+  font-weight: bold; }
+  input[type=submit]:hover {
+    color: #cc2222; }
+
+input, select, textarea {
+  font-size: 1.1em;
+  padding: 4px 8px; }
+
+input {
+  width: 250px; }
+
+label, input[type=submit] {
+  display: block; }
+
+input[type=submit] {
+  margin: 10px 0 0;
+  width: auto; }
+
+.login form {
+  position: relative;
+  margin: 20px 0; }
+  .login form label {
+    line-height: 40px; }
+  .login form input[type=text], .login form input[type=password] {
+    position: absolute;
+    left: 100px; }
+  .login form input[type=submit] {
+    margin-left: 284px; }
 
 #bg img {
   width: 400px;
@@ -86,6 +109,9 @@ nav a {
   position: relative;
   left: -4%;
   box-shadow: none; }
+
+.guide_main .text p {
+  margin: 1em 0; }
 
 .mini {
   font-size: 0.8em; }

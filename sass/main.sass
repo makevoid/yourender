@@ -47,6 +47,9 @@ p
 $main: #A00
 // $main: #271
 
+// colors: computed
+$main_hover: $main + #222
+
 // style
 
 body
@@ -65,15 +68,15 @@ a
   text-shadow: -1px 0px 1px #EEE
   font-weight: bold
   &:hover
-    color: $main + #222
+    color: $main_hover
     text-shadow: 1px 1px 0px #FFF
 
 
 #container > header
-  padding: 5px 12px
   width: 13em
   +rounded(10px)
   background: #EEE
+  margin: 10px 0 20px 0
   & > h1
     margin: 0
     font-size: 1.2em
@@ -83,11 +86,14 @@ a
 
 #container > nav
   margin: 18px 0 10px
+  float: right
 
 nav
   margin: 10px 0 0 0
   line-height: 32px
 
+nav.user
+  font-size: 0.7em
 
 
 =button
@@ -102,11 +108,41 @@ nav
     +bg(#EEE)
     border: 1px solid #999
 
-.btn
+.btn, nav a, input[type=submit]
   +button
 
-nav a
-  +button
+input[type=submit]
+  color: $main
+  font-weight: bold
+  &:hover
+    color: $main_hover
+
+// forms
+
+input, select, textarea
+  font-size: 1.1em
+  padding: 4px 8px
+
+input
+  width: 250px
+
+label, input[type=submit]
+  display: block
+
+input[type=submit]
+  margin: 10px 0 0
+  width: auto
+
+.login form
+  position: relative
+  margin: 20px 0
+  label
+    line-height: 40px
+  input[type=text], input[type=password]
+    position: absolute
+    left: 100px
+  input[type=submit]
+    margin-left: 284px
 
 
 //  .content
@@ -148,6 +184,10 @@ nav a
     position: relative
     left: -4%
     box-shadow: none
+
+.guide_main
+  .text p
+    margin: 1em 0
 
 .mini
   font-size: 0.8em

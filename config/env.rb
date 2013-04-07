@@ -2,6 +2,8 @@ path = File.expand_path '../../', __FILE__
 PATH = path
 APP = "yourender"
 
+PRICE = 10 # euro
+
 require "bundler/setup"
 Bundler.require :default
 module Utils

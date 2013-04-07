@@ -6,14 +6,17 @@
     %link{ rel: "stylesheet", href: "/css/main.css" }
     = partial :metas
 
-  %body
+  %body{ class: section }
     #container
+      - if logged?
+        %nav.user
+          %form{ action: "/logout", method: "post" }
+            %input{ value: "Logout", type: "submit" }
       %header
         %h1
           %a{ href: "/" }
             #{TITLE}.it
             %span.tagline= t "Create your personal render farm", "Crea la tua render farm"
-      %nav
       %section.content
 
         = yield

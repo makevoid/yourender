@@ -1,0 +1,26 @@
+%h1 Acquista la guida YouRender
+
+.buy
+  %p
+    Non hai ancora acquistato la guida?
+    %a.btn{ href: "/buy" } Comprala ora!
+    A soli #{PRICE}€!
+
+  %p
+    oppure torna alla 
+    %a.btn{ href: "/" } descrizione del servizio
+
+
+%h1 Già acquistata? Accedi
+
+%p.mini Visualizza la guida YouRender precedentemente acquistata inserendo la tua email e la password che ti abbiamo inviato:
+
+%form{ action: "/login", method: "post" }
+  %label
+    email:
+    %input{ name: "email", type: "text" }
+  %label
+    password:
+    %input{ name: "password", type: "password" }
+  %input{ value: "Accedi", type: "submit" }
+  

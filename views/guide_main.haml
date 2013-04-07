@@ -1,14 +1,35 @@
-%p Benvenuto nella guida YouRender:
+.guide_main
+  %p Benvenuto nella guida YouRender:
 
-%p Ecco i passaggi necessari spiegati nel dettaglio:
+  %p Ecco i passaggi necessari spiegati nel dettaglio:
 
-%nav
-  - guides = Dir.glob("guides/*")
-  - guides.each do |guide|
-    - guide_name = File.basename guide, ".saf"
-    %a.btn{ href: "/guides/#{guide_name}" }= label guide_name
+  %nav
+    - guides = Dir.glob("guides/*")
+    - guides.each do |guide|
+      - guide_name = File.basename guide, ".saf"
+      %a.btn{ href: "/guides/#{guide_name}" }= label guide_name
+
+  .text
+    :textile
+      In questa guida ti verrà spiegato come lanciare un server e salvarne lo "stato" in un _immagine_, che potrai *caricare* successivamente, ogni volta che avrai bisogno di effettuare i tuoi render.
+
+      Il servizio EC2 di amazon ti permette di gestire computer virtuali remoti.
+      Un computer virtuale e' come un computer fisico (quello che stai usando) e in piu' ha la caratteristica di poter salvare lo stato attuale in un'immagine (programmi installati, programmi aperti in quel momento). 
+
+      Dopo aver salvato l'immagine contenente tutti i programmi che usi per creare i tuoi render, potrai ricaricarla in un secondo momento, gia' pronta per renderizzare.
+
+      Dovrai solamente spedirti il file del progetto (via ftp o con servizi come wetransfer https://www.wetransfer.com/), fare il tuo render e spedirtelo indietro.
+
+      note: [con wetransfer puoi spedirti i file semplicemente mettendo in tutti e due i campi, mittente e destinatario, il tuo indirizzo email]
+
+      legenda:
+      EC2 - Elastic Compute Cloud, servizio di amazon che permette di gestire server virtuali remoti
+      AMI - Immagine di un server
+      RDP - Remote Desktop Protocol, sistema con cui poter connettersi a un computer remoto (sistemi simili: vnc, teamviewer...)
     
-.mini
-  :textile
-    **note:**
-    Se queste immagini sono troppo piccole allarga la finestra del browser.
+  .mini
+    :textile
+      **note:**
+      Se le immagini sono troppo piccole allarga la finestra del browser.
+    
+    
