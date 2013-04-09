@@ -1,7 +1,25 @@
-1: Accedi al pannello di controllo "EC2 di Amazon AWS":https://console.aws.amazon.com/ec2/home e clicca su AMI
+1: Accedi al pannello di controllo "EC2 di Amazon AWS":https://console.aws.amazon.com/ec2/home e clicca su *AMI*
 
-2: La pagina dovrebbe mostrare una AMI (Immagine server) chiamata *yourender*, *cliccaci col* tasto *destro* del mouse, si aprira' un menu' a tendina, clicca *Launch Instance*
+2: La pagina dovrebbe mostrare una AMI (Immagine server) chiamata *yourender*, *cliccaci col* tasto *destro* del mouse
 
-3> Seleziona il tipo di Server da lanciare, il piu' potente e' l'ultimo _CG1 Cluster GPU_ 8 core, 22GB di ram, doppia scheda video e ha un costo di circa *2€ l'ora* 
-Puoi consultare la pagina dei "costi EC2":http://aws.amazon.com/ec2/pricing/. I prezzi sono sotto On-Demand Instances > EU (Ireland) > Windows Usage
+3: Si aprira' un menu' a tendina, clicca *Launch Instance*
+
+4: Apri il menu' a tendina a destra in alto
+
+5> Seleziona il tipo di Server da lanciare, il piu' potente e' l'ultimo _CG1 Cluster GPU_ 8 core, 22GB di ram, doppia scheda video e ha un costo di circa *2€ l'ora* 
+Puoi consultare la pagina dei "costi EC2":http://aws.amazon.com/ec2/pricing/ per conoscere il prezzo preciso e aggiornato, lo trovi sotto _On-Demand Instances > EU (Ireland) > Windows Usage > Cluster GPU Instances - Quadruple Extra Large_, al momento di scrittura della guida e' di "$2.60 all'ora":https://www.google.com/search?q=2.60+usd+to+eur
 <
+
+6: Clicca *Continue*
+
+7: Clicca nuovamente *Continue*
+
+8: Ancora *Continue*...
+
+9: di nuovo *Continue*...
+
+10: Seleziona come *Existing Key Pair* la chiave *yourender* e premi Continue
+
+11: Seleziona il security group chiamato *RDP* e clicca Continue
+
+12: Premi il tasto *Launch*

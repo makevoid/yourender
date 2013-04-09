@@ -3,6 +3,8 @@ PATH = path
 APP = "yourender"
 
 PRICE = 10 # euro
+PRICE_NET = 8.26
+VAT   = 21 # percent
 
 require "bundler/setup"
 Bundler.require :default
