@@ -116,6 +116,13 @@ input[type=submit] {
 .mini {
   font-size: 0.8em; }
 
+.right {
+  float: right; }
+
+nav.bottom a.right {
+  padding-top: 0;
+  padding-bottom: 0; }
+
 #debug {
   display: none;
   background: white;

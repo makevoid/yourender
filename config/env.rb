@@ -22,6 +22,8 @@ include Labelize
 require "#{path}/lib/utils"
 include Utils
 require "#{path}/lib/simple_article_format"
+require "#{path}/lib/mhash"
+include Mhash
 
 
 env = ENV["RACK_ENV"] || "development"

@@ -1,24 +1,25 @@
 %a.btn{ href: "/guide" } < indietro
 
-.guide{ class: @name }
 
-  - dir = @name
+- dir = @name
+- dir_screen = dir.split("_")[1..-1].join("_")
+
+.guide{ class: dir_screen }
+
   - labels = Saf.load "./guides/#{dir}.saf"
   - labels = labels.first
 
-  - screens = Dir.glob("./screenshots_src/#{dir}/*")
+  - screens = Dir.glob("./screenshots_src/#{dir_screen}/*.png")
   - screens.sort_by!{ |screen| File.basename(screen).to_i } #{ |screen| File.mtime screen }
   - screens.each_with_index do |screen, idx|
     - name = File.basename screen, ".*"
-    - path = "/screens/#{dir}/#{name}.png"
+    - path = "/screens/#{dir_screen}/#{name}.png"
     %img{ src: path }
-    %p.num #{name}. 
+    %p.num #{name}.
     - label = labels[name.to_sym]
     - if label
       .text= label
 
-/
-  http://www.microsoft.com/mac/remote-desktop-client
-  http://www.microsoft.com/en-us/download/search.aspx?q=microsoft%20remote%20desktop%20connection%20for%20mac&p=0&r=10&t=&s=Relevancy~Descending
-
-  http://www.microsoft.com/en-us/download/details.aspx?id=18140
+%nav.bottom
+  %a.btn{ href: "/guide" } < torna alle guide
+  %a.btn.right{ href: "/guides/#{Guide.new(dir).next.name_url}" } prossimo step  >

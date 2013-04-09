@@ -1,0 +1,7 @@
+1: Accedi al pannello di controllo "EC2 di Amazon AWS":https://console.aws.amazon.com/ec2/home e clicca su AMI
+
+2: La pagina dovrebbe mostrare una AMI (Immagine server) chiamata *yourender*, *cliccaci col* tasto *destro* del mouse, si aprira' un menu' a tendina, clicca *Launch Instance*
+
+3> Seleziona il tipo di Server da lanciare, il piu' potente e' l'ultimo _CG1 Cluster GPU_ 8 core, 22GB di ram, doppia scheda video e ha un costo di circa *2€ l'ora* 
+Puoi consultare la pagina dei "costi EC2":http://aws.amazon.com/ec2/pricing/. I prezzi sono sotto On-Demand Instances > EU (Ireland) > Windows Usage
+<

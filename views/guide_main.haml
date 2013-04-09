@@ -4,17 +4,15 @@
   %p Ecco i passaggi necessari spiegati nel dettaglio:
 
   %nav
-    - guides = Dir.glob("guides/*")
-    - guides.each do |guide|
-      - guide_name = File.basename guide, ".saf"
-      %a.btn{ href: "/guides/#{guide_name}" }= label guide_name
+    - GUIDES.each do |guide|
+      %a.btn{ href: "/guides/#{guide.name_url}" }= label guide.name
 
   .text
     :textile
       In questa guida ti verrà spiegato come lanciare un server e salvarne lo "stato" in un _immagine_, che potrai *caricare* successivamente, ogni volta che avrai bisogno di effettuare i tuoi render.
 
       Il servizio EC2 di amazon ti permette di gestire computer virtuali remoti.
-      Un computer virtuale e' come un computer fisico (quello che stai usando) e in piu' ha la caratteristica di poter salvare lo stato attuale in un'immagine (programmi installati, programmi aperti in quel momento). 
+      Un computer virtuale e' come un computer fisico (quello che stai usando) e in piu' ha la caratteristica di poter salvare lo stato attuale in un'immagine (programmi installati, programmi aperti in quel momento).
 
       Dopo aver salvato l'immagine contenente tutti i programmi che usi per creare i tuoi render, potrai ricaricarla in un secondo momento, gia' pronta per renderizzare.
 
@@ -26,10 +24,10 @@
       EC2 - Elastic Compute Cloud, servizio di amazon che permette di gestire server virtuali remoti
       AMI - Immagine di un server
       RDP - Remote Desktop Protocol, sistema con cui poter connettersi a un computer remoto (sistemi simili: vnc, teamviewer...)
-    
+
   .mini
     :textile
       **note:**
       Se le immagini sono troppo piccole allarga la finestra del browser.
-    
-    
+
+
