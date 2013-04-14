@@ -1,3 +1,43 @@
+# contiene anche come creare un keypair e un security group
+
 1: Per accedere alla console AWS, vai su "aws.amazon.com":http://aws.amazon.com e clicca su My Account > AWS Management Console
-2: Questa è la console di AWS
-3: aaa
+2: Questa schermata contiene i numerosi servizi web di Amazon, a noi interessa solamente *EC2*, quindi andremo a cliccare sul link *EC2*, _Virtual Servers in the Cloud_
+3> Ecco il pannello di controllo *EC2*! Da qui potrai far partire server, terminarli e creare _immagini server_!
+Partiamo con qualche configurazione:
+Seleziona in alto a destra la zona da cui interessa accedere al servizio, di default dovresti trovare selezionata _US East_.<
+4: Cambiala in *EU (Ireland)*
+5: E' arrivato il momento di creare una *Key Pair*, una chiave sicura che ti consente di ottenere le password dei server che andrai a creare, clicca su *Key Pairs* 
+6: Clicca sul bottone *Create Key Pair*
+7: Nomina la tua chiave *yourender*
+8: Hai creato la chiave! Verra' scaricato un file *yourender.pem*, e' importante salvarlo, visto che ti servira' per ottenere la password per accedere al server.
+9: Seleziona *Security Groups* dal menu' a sinistra
+10: Clicca sul bottone *Create Security Group*
+11: Crea un security group con Name *rdp*, e Description *rdp*, senza VPC e premi il bottone *Yes, Create*
+12: Seleziona dal menu' inferiore la scheda *Inbound*
+13: Seleziona *RDP* nel menu' a tendina _Create a new rule_
+14: Il valore Source dovrebbe essere 0.0.0.0/0, clicca il bottone *+ Add Rule*
+15: Clicca sul bottone *Apply Rule changes* 
+16> 
+Perfetto, abbiamo cosi' creato una regola che ci consente di accedere al nostro server attraverso RDP (Remote Desktop Protocol)
+*nota per* chi sta installando un sistema *linux*: per utilizzare VNC tramite linux e' necessario creare una regola per le porte 5900-5910.
+Ora clicca sul link *Istances* dal menu' a sinistra <
+17: Clicca in alto su *Launch Istance*
+18: Seleziona *Classic Wizard* e clicca su *Continue*
+19: Scorri la lista fino in fondo e seleziona *Microsoft Windows Server 2012 Base*
+20: Seleziona dal menu' a tendina _Instance Type_ *CG1 Cluster GPU* (Il server piu' potente per effettuare render, che ha un costo di 2€ l'ora)
+21: Clicca su Continue
+22: Seleziona *No Placement Group* e clicca su Continue
+23: Clicca nuovamente Continue
+24: Ancora una volta Continue
+25: Seleziona la _Key Pair_ *yourender* e premi il bottone Continue
+26: Seleziona il _Security Group_ *RDP* e continua...
+27: Premi *Launch* per lanciare il server da questo momento Amazon iniziera' a addebitarti la tariffa oraria di utilizzo server.
+28: Il server passera' dallo stato *pending* (giallo)
+29: A *running* (verde), e gli *Status Checks* in qualche minuto cambieranno da initializing... a *2/2 checks*, a questo punto potrai connetterti al server
+30: *Clicca col* tasto *destro* del mouse sul server e premi *Connect*
+31: Clicca su *Retreive Password* per ottenere la password del server
+32: Premi *Choose File* e scegli il file *yourender.pem* precedentemente scaricato (al passo numero 8)
+33: Premi il bottone *Decrypt Password*
+34: Nel campo password apparira' la password del server, scrivila in un posto sicuro, sara' la password di tutti i server che andrai a lanciare in futuro.
+35> Clicca sul link *Download shortcut file*, verra' scaricato un file RDP da cui potrai connetterti al server. A questo punto dovrai scaricare il software di *RDP* (Remote Desktop Protocol / Connection) 
+Prosegui seguendo la "guida per Mac":/guides/3b_install_rdp_osx o la "guida per Windows":/guides/3b_install_rdp_win, se hai Linux scarica il pacchetto "rdesktop":http://www.rdesktop.org/ e salta alla prossima sezione.<

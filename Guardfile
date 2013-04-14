@@ -5,4 +5,5 @@ guard 'livereload' do
   watch(%r{public/css/.+.css})
   watch(%r{public/js/.+.js})
   watch(%r{guides/.+.saf})
+  watch(%r{screenshots_src/.+.(jpg|png)})
 end

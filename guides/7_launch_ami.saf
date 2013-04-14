@@ -23,3 +23,13 @@ Puoi consultare la pagina dei "costi EC2":http://aws.amazon.com/ec2/pricing/ per
 11: Seleziona il security group chiamato *RDP* e clicca Continue
 
 12: Premi il tasto *Launch*
+
+13: Schiaccia il bottone *Close*
+
+14: Controlla lo stato (State) del server, passera' da giallo...
+
+15: ...a verde (running), e gli Status Checks
+
+16: che dovranno diventare 2/2, a questo punto potrai connetterti all'istanza, se non ti ricordi come si fa 
+
+17: Non ti dimenticare di "Teminare il server" quando hai finito di utilizzarlo.

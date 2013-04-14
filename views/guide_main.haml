@@ -5,22 +5,25 @@
 
   %nav
     - GUIDES.each do |guide|
-      %a.btn{ href: "/guides/#{guide.name_url}" }= label guide.name
+      %a.btn{ href: "/guides/#{guide.name_url}" } #{guide.id}) #{label guide.name}
 
   .text
     :textile
       In questa guida ti verrà spiegato come lanciare un server e salvarne lo "stato" in un _immagine_, che potrai *caricare* successivamente, ogni volta che avrai bisogno di effettuare i tuoi render.
 
-      Il servizio EC2 di amazon ti permette di gestire computer virtuali remoti.
+      Il servizio EC2 di Amazon ti permette di gestire computer virtuali remoti.
       Un computer virtuale e' come un computer fisico (quello che stai usando) e in piu' ha la caratteristica di poter salvare lo stato attuale in un'immagine (programmi installati, programmi aperti in quel momento).
 
       Dopo aver salvato l'immagine contenente tutti i programmi che usi per creare i tuoi render, potrai ricaricarla in un secondo momento, gia' pronta per renderizzare.
 
-      Dovrai solamente spedirti il file del progetto (via ftp o con servizi come wetransfer https://www.wetransfer.com/), fare il tuo render e spedirtelo indietro.
+      Dovrai solamente spedirti il file del progetto (via ftp o con servizi come "wetransfer":https://www.wetransfer.com), fare il tuo render e spedirtelo indietro.
 
       note: [con wetransfer puoi spedirti i file semplicemente mettendo in tutti e due i campi, mittente e destinatario, il tuo indirizzo email]
 
-      legenda:
+      *legenda:*
+      Server - Computer remoto accessibile tramite internet
+      VM - Virtual Machine, Server virtuale, Macchina Virtuale - Un computer virtuale: le VM possiedono numerosi vantaggi in termini di gestione rispetto ai computer "standard", chiamati anche _server dedicati_.
+      Immagine Server - E' un server virtuale salvato in un file. 
       EC2 - Elastic Compute Cloud, servizio di amazon che permette di gestire server virtuali remoti
       AMI - Immagine di un server
       RDP - Remote Desktop Protocol, sistema con cui poter connettersi a un computer remoto (sistemi simili: vnc, teamviewer...)

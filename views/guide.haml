@@ -2,6 +2,9 @@
 
 
 - dir = @name
+= dir
+-# label = labels[name.to_sym]
+
 - dir_screen = dir.split("_")[1..-1].join("_")
 
 .guide{ class: dir_screen }
@@ -14,12 +17,15 @@
   - screens.each_with_index do |screen, idx|
     - name = File.basename screen, ".*"
     - path = "/screens/#{dir_screen}/#{name}.png"
-    %img{ src: path }
     %p.num #{name}.
     - label = labels[name.to_sym]
     - if label
       .text= label
+    %img{ src: path }
 
-%nav.bottom
-  %a.btn{ href: "/guide" } < torna alle guide
-  %a.btn.right{ href: "/guides/#{Guide.new(dir).next.name_url}" } prossimo step  >
+
+  %nav.bottom
+    %a.btn{ href: "/guide" } < torna alle guide
+    - guide_next = Guide.new(dir).next
+    - if guide_next
+      %a.btn.right{ href: "/guides/#{guide_next.name_url}" } prossimo step  >

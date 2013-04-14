@@ -1,3 +1,6 @@
-1: *opzionale:* Questa e' la "pagina ufficiale per il client RDP":http://www.microsoft.com/mac/remote-desktop-client per mac, visitala per maggiori info sul software
-2: Scarica l'ultima versione di "_Microsoft Remote Desktop Connection Client for Mac_":http://www.microsoft.com/en-us/download/search.aspx?q=microsoft%20remote%20desktop%20connection%20for%20mac&p=0&r=10&t=&s=Relevancy~Descending (cliccando su questo link) dovrebbe essere il primo download
-3: Clicca sul bottone download per scaricare
+1: Scarica l'ultima versione di "_Microsoft Remote Desktop Connection Client for Mac_":http://www.microsoft.com/en-us/download/search.aspx?q=microsoft%20remote%20desktop%20connection%20for%20mac&p=0&r=10&t=&s=Relevancy~Descending (cliccando su questo link) dovrebbe essere il primo download
+2: Clicca sul bottone download per scaricare
+3: Verra' scaricato un file dmg, aprilo
+4: Conterra' un pacchetto d'installazione mpkg, apri anche questo
+5: Segui il wizard di installazione, premendo Continue, Agree e inserendo la password del tuo computer quando richiesta
+6: L'installazione completera' e sarai pronto a usare *RDC* per connetterti al tuo server! 

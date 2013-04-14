@@ -4,6 +4,9 @@ a {
 p {
   line-height: 1.2em; }
 
+* {
+  box-sizing: border-box; }
+
 body {
   font-family: Georgia, sans-serif;
   background: #eeeeee;
@@ -42,6 +45,12 @@ a {
 nav {
   margin: 10px 0 0 0;
   line-height: 32px; }
+  nav a {
+    white-space: nowrap; }
+
+.guide_main nav a {
+  display: block;
+  width: 360px; }
 
 nav.user {
   font-size: 0.7em; }
@@ -97,18 +106,30 @@ input[type=submit] {
 .item img {
   width: 33%; }
 
-.guide img {
-  width: 100%;
-  margin: 50px 0 10px;
-  box-shadow: 0 3px 10px #999999; }
-.guide p {
-  margin: 0; }
-
-.guide.create_ami img {
-  width: 110%;
-  position: relative;
-  left: -4%;
-  box-shadow: none; }
+.guide {
+  margin: 30px 0;
+  font-size: 1.1em; }
+  .guide img {
+    width: 100%;
+    margin: 10px 0 60px;
+    box-shadow: 0 3px 10px #999999; }
+  .guide p {
+    margin: 0;
+    display: block; }
+  .guide .text, .guide .num {
+    float: left;
+    border-radius: 7px; }
+  .guide .text {
+    max-width: 80%;
+    padding: 5px 10px 9px;
+    background: white;
+    border: 1px solid #bbbbbb;
+    box-shadow: 1px -2px 4px #eeeeee inset; }
+  .guide .num {
+    width: 36px;
+    margin: 0 5px 0 0;
+    padding: 5px 5px 8px 8px;
+    font-size: 1.2em; }
 
 .guide_main .text p {
   margin: 1em 0; }

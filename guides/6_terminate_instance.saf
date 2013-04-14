@@ -1,0 +1,6 @@
+1> E' molto importante non dimenticarsi un server acceso, visto che il costo orario e' di 2€, vediamo quindi come effettuare lo spegnimento.
+TODO: *Clicca col* tasto *destro* del mouse sul server e scegli *Terminate* dal menu' a tendina.
+<
+2: Premi *Yes, Terminate*
+3: Lo stato del server passera' da _shutting down_ (spegnimento), in giallo...
+4: ..a _terminated_, in rosso, che indica l'avvenuto spegnimento del server.
