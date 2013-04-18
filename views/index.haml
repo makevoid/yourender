@@ -1,62 +1,75 @@
 -# if user && user.client?
 
-%p Sei un architetto o un designer? Fai modelli in 3D? Effettui render? I tempi di rendering sono troppo lunghi? Vorresti poter utilizzare il tuo computer mentre renderizzi? Vorresti lanciare multipli render contemporaneamente?
+%p Effettui render di modelli 3D? I tempi di rendering sono troppo lunghi? 
 
-%p Da oggi puoi! E' arrivato YouRender!
+/ Vorresti poter utilizzare il tuo computer mentre renderizzi? Vorresti lanciare multipli render contemporaneamente?
 
-%a.btn{ href: "/guide" } Visualizza la guida
+%p Non preoccuparti! C'e' YouRender!
+
+.cont_left
+
+  = redcloth :home_it
 
 
-= redcloth :home_it
+  %a.btn{ href: "/contents" } Contenuti della guida
 
-:textile
-  h1. Cos'e' YouRender:
+  %a.btn{ href: "/author" } Autore
+
+  %a.btn{ href: "/guide" } Visualizza la guida
   
-  E' la *guida per* creare* la tua server farm personale*, per effettuare render quando vuoi, in poco tempo, limitando i costi! 
+
+
+  :textile
+    h1. Cos'e' YouRender:
+  
+    E' la *guida per* creare* la tua server farm personale*, per effettuare render quando vuoi, in poco tempo, limitando i costi! 
   
   
-  h1. Esempi di render:
+    h1. Esempi di render:
 
-  Test effettuati nell'Aprile 2013
+    Test effettuati nell'Aprile 2013
 
-  I render sono "open source":http://www.blender.org/features-gallery/blender-open-projects/ e sotto licenza creative commons [ "sintel":http://www.sintel.org/ ]
-
-
-  esempio di render:
-
-  modello:
-
-  http://www.blendswap.com/blends/view/67465
-
-/ http://uploads.makevoid.com/modernes_wohnzimmer.blend
-
-:textile
-  istanza: c1.medium
-  software: blender
-  sistema operativo: windows
+    I render sono "open source":http://www.blender.org/features-gallery/blender-open-projects/ e sotto licenza creative commons [ "sintel":http://www.sintel.org/ ]
 
 
-  Tipi di istanze: http://aws.amazon.com/ec2/instance-types/
-  Prezzi: http://aws.amazon.com/ec2/pricing/
+    esempio di render:
+
+    modello:
+
+    http://www.blendswap.com/blends/view/67465
+
+  / http://uploads.makevoid.com/modernes_wohnzimmer.blend
+
+  :textile
+    istanza: c1.medium
+    software: blender
+    sistema operativo: windows
 
 
-%p Compra la guida - 10Euro
+    Tipi di istanze: http://aws.amazon.com/ec2/instance-types/
+    Prezzi: http://aws.amazon.com/ec2/pricing/
 
-%p Prezzo lancio
 
-%p Compra la guida e 2 ore di assistenza - 50Euro
+  %p Compra la guida - 10Euro
 
-- photos = Dir.glob("./public/img/*").reverse
-#bg
+  %p Prezzo lancio
+
+  %p Compra la guida e 2 ore di assistenza - 50Euro
+
+  %a.btn Render it!
+
+  %p Francesco Canessa
+  %p Software Development
+  %p via Bandini 15, 50014 Fiesole (FI), Italy
+  %p PIVA 05964990484
+
+
+
+
+.cont_right
+  .spaced
+    %a.btn{ href: "#" } Acquista la guida! (10€)
+
+  - photos = Dir.glob("./public/img/*").reverse
   - photos.each do |photo|
     %img{ src: "/img/#{File.basename photo}" }
-
-%a.btn Render it!
-
-%p Francesco Canessa
-%p Software Development
-%p via Bandini 15, 50014 Fiesole (FI), Italy
-%p PIVA 05964990484
-
-
-

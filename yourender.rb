@@ -111,6 +111,14 @@ class Yourender < Sinatra::Base
     haml :buy
   end
 
+  get "/contents" do
+    haml :contents
+  end
+
+  get "/author" do
+    haml :author
+  end
+
   post "/login" do
     session[:bought] = true
     redirect "/guide"

@@ -1,0 +1,36 @@
+h1. Il metodo:
+
+La guida YouRender e':
+
+- semplice 
+- illustrata
+- passo passo
+
+Tutti i passaggi necessari sono relativamente semplice per un tecnico, per questo, se non hai 
+
+h3. Il metodo YouRender consiste nel:
+
+- Registrarsi a AWS
+- *Lanciare un computer remoto* (tramite EC2)
+- Installarci:
+  - Programmi di base (browser, 7zip)
+  - Programmi di rendering (non forniti nella guida o nel servizio)
+- *Salvare* lo stato in *un'immagine* server
+- Lanciare un computer remoto *caricando l'immagine* salvata
+
+Il metodo YouRender utilizza il servizio "Amazon EC2":http://aws.amazon.com/ec2/pricing/
+Il costo del servizio EC2, per un cluster di 2 server windows Intel Xeon X5570 (totale di 8 core fisici) a 2.9Ghz, 22GB di RAM, e due schede video NVIDIA Tesla M205, in europa e' di circa *2&euro; l'ora*.
+
+h3. Necessari per registrarsi al servizio AWS
+
+- Carta di credito
+- Telefono fisso o cellulare
+
+h3. Se ti e' gia' tutto chiaro, perfetto! Se invece vuoi farlo ma non sai come compra la guida:
+
+ti ricordo che sono necessarie: 
+
+- conoscenza dei software utilizzati e da installare
+- copia e licenza software utilizzati
+
+I tempi di render saranno notevolmente ridotti e avrai la possibilita' di far andare piu' rendering contemporaneamente, visto che il costo e' a *consumo orario*
