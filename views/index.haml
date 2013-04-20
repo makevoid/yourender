@@ -26,24 +26,15 @@
     %a.btn{ href: "/guide" } Visualizza la guida
 
 
-  / http://uploads.makevoid.com/modernes_wohnzimmer.blend
-
-  :textile
-    istanza: c1.medium
-    software: blender
-    sistema operativo: windows
 
   -# %p Compra la guida e 3 ore di assistenza - 100Euro
 
-
-  
-  %a.btn.buy{ href: buy_link } Acquista la guida! (10€)
+  %p
+    %a.btn.buy{ href: buy_link } Acquista la guida! (10€)
 
 
 .cont_right
   .spaced
     %a.btn.buy{ href: buy_link } Acquista la guida! (10€)
 
-  - photos = Dir.glob("./public/img/*").reverse
-  - photos.each do |photo|
-    %img{ src: "/img/#{File.basename photo}" }
+  = partial :photos

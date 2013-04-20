@@ -1,0 +1,3 @@
+- photos = Dir.glob("./public/img/*").reverse
+- photos.each do |photo|
+  %img{ src: "/img/#{File.basename photo}" }
