@@ -5,10 +5,10 @@ require "#{path}/config/env.rb"
 class Yourender < Sinatra::Base
   include Voidtools::Sinatra::ViewHelpers
 
-  set :logging, true
-  log = File.new "log/development.log", "a"
-  STDOUT.reopen log
-  STDERR.reopen log
+  # set :logging, true
+  # log = File.new "log/development.log", "a"
+  # STDOUT.reopen log
+  # STDERR.reopen log
 
   enable :sessions
 
@@ -82,6 +82,12 @@ class Yourender < Sinatra::Base
       @name_url.split("_")[0].to_i
     end
 
+  end
+
+  # paypal
+
+  def buy_link
+    "#"
   end
 
   # routes: main

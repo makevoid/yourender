@@ -158,6 +158,17 @@ nav.bottom a.right {
 .cont_left {
   width: 70%; }
 
+.btn.buy {
+  white-space: nowrap; }
+
+.small {
+  font-size: 0.9em; }
+  .small p {
+    margin: 0; }
+
+img.makevoid {
+  margin: 20px 0 10px 10px; }
+
 #debug {
   display: none;
   background: white;
