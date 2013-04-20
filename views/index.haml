@@ -1,6 +1,6 @@
 -# if user && user.client?
 
-%p Effettui render di modelli 3D? I tempi di rendering sono troppo lunghi? 
+%p Effettui render di modelli 3D? I tempi di rendering sono troppo lunghi?
 
 / Vorresti poter utilizzare il tuo computer mentre renderizzi? Vorresti lanciare multipli render contemporaneamente?
 
@@ -10,36 +10,21 @@
 
   = redcloth :home_it
 
-
-  %a.btn{ href: "/contents" } Contenuti della guida
-
-  %a.btn{ href: "/author" } Autore
-
-  %a.btn{ href: "/guide" } Visualizza la guida
-  
-
-
-  :textile
-    h1. Cos'e' YouRender:
-  
-    E' la *guida per* creare* la tua server farm personale*, per effettuare render quando vuoi, in poco tempo, limitando i costi! 
-  
-  
-  %hr
-    
-  :textile
-    h1. Esempi di render:
-
-    Test effettuati nell'Aprile 2013
-
-    I render sono "open source":http://www.blender.org/features-gallery/blender-open-projects/ e sotto licenza creative commons [ "sintel":http://www.sintel.org/ ]
+  -# h3. Cos'e' una Render Farm?
+  -#
+  -# E' uno o piu' computer remoti su cui lanciare dei render.
+  -#
+  -# h3. Come fare:
+  -#
+  -# Amazon e altri provider affittano dei computer, anche molto potenti, a consumo (orario)
 
 
-    esempio di render:
+  %nav
+    %a.btn{ href: "/contents" } Contenuti della guida
+    %a.btn{ href: "/author" } Autore
+    %a.btn{ href: "/examples" } Esempi di render
+    %a.btn{ href: "/guide" } Visualizza la guida
 
-    modello:
-
-    http://www.blendswap.com/blends/view/67465
 
   / http://uploads.makevoid.com/modernes_wohnzimmer.blend
 
@@ -51,7 +36,8 @@
   -# %p Compra la guida e 3 ore di assistenza - 100Euro
 
 
-
+  
+  %a.btn.buy{ href: buy_link } Acquista la guida! (10€)
 
 
 .cont_right

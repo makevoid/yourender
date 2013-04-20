@@ -107,6 +107,21 @@ class Yourender < Sinatra::Base
     haml :guide
   end
 
+  # pages
+
+  get "/contents" do
+    haml :contents
+  end
+
+  get "/author" do
+    haml :author
+  end
+
+  get "/examples" do
+    haml :examples
+  end
+
+
   # routes: auth
 
   get "/login" do
@@ -115,14 +130,6 @@ class Yourender < Sinatra::Base
 
   get "/buy" do
     haml :buy
-  end
-
-  get "/contents" do
-    haml :contents
-  end
-
-  get "/author" do
-    haml :author
   end
 
   post "/login" do

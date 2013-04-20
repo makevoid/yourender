@@ -1,21 +1,12 @@
-**YouRender** e' una guida che ti spiega come affittare a ore dei computer molto potenti per effettuare i tuoi render!
+<!-- **YouRender** e' una guida che ti spiega come affittare a ore dei computer molto potenti per effettuare i tuoi render!
+!-->
+
+h1. Cos'e' YouRender:
+
+E' la *guida* per creare la tua render farm personale, per effettuare render quando vuoi, in poco tempo, limitando i costi! 
+
+
+<!--  ..ti permette di renderizzare su server molto potenti, da subito!  !-->
 
 
 
----
-
-
-..ti permette di renderizzare su server molto potenti, da subito!  
-
-
-YouRender e' un metodo adatto se effettui render pesanti e non hai un computer potente.
-
-
-
-h3. Cos'e' una Render Farm?
-
-E' uno o piu' computer remoti su cui lanciare dei render.
-
-h3. Come fare?
-
-Amazon e altri provider affittano dei computer, anche molto potenti, a consumo (orario) 
