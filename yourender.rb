@@ -133,7 +133,7 @@ class Yourender < Sinatra::Base
   end
 
   post "/login" do
-    session[:bought] = true
+    session[:bought] = true unless ENV['RACK_ENV'] == 'production' # FIXME
     redirect "/guide"
   end
 
