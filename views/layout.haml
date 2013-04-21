@@ -6,21 +6,21 @@
     %link{ rel: "stylesheet", href: "/css/main.css" }
     = partial :metas
 
-  %body{ class: section }
+  %body{ class: "#{section}_page" }
     #container
-      - if logged?
-        %nav.user
-          %form{ action: "/logout", method: "post" }
-            %input{ value: "Logout", type: "submit" }
       %header
         %h1
+          - if logged?
+            .logout
+              %form{ action: "/logout", method: "post" }
+                %input{ value: "Logout", type: "submit" }
           %a{ href: "/" }
             #{TITLE}.it
             %span.tagline= t "Create your personal render farm", "Crea la tua render farm"
       %section.content
-
         = yield
-
+        .clear
+        
         - if DEBUG
           %a.debug{ href: "javascript:void(0)", onclick: "$('#debug').toggle()" } [-]
           #debug

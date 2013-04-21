@@ -2,21 +2,48 @@ a {
   text-decoration: none; }
 
 p {
-  line-height: 1.2em; }
+  line-height: 1.2em;
+  margin: 0.1em 0 1.2em; }
 
 * {
   box-sizing: border-box; }
 
+html, body {
+  margin: 0; }
+
+.right {
+  float: right; }
+
+.left {
+  float: left; }
+
+.clear {
+  clear: both; }
+
 body {
   font-family: Georgia, sans-serif;
-  background: #eeeeee;
+  background: #dddddd;
   margin: 0;
   padding: 0; }
 
 #container {
   margin: 0 auto;
-  width: 90%;
-  max-width: 1000px; }
+  width: 100%; }
+
+header > h1, #container > .content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3px 12px; }
+
+#container > .content {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px; }
+
+header > h1 {
+  padding-top: 6px;
+  padding-bottom: 5px; }
 
 a {
   color: #aa0000;
@@ -28,32 +55,23 @@ a {
 
 #container > header {
   width: 13em;
-  border-radius: 10px;
-  background: #eeeeee;
-  margin: 10px 0 20px 0; }
+  margin: 0 0 0 0;
+  background: #bbbbbb;
+  width: 100%; }
   #container > header > h1 {
-    margin: 0;
     font-size: 1.2em; }
     #container > header > h1 span {
       font-size: 0.8em;
       display: block; }
 
-#container > nav {
-  margin: 18px 0 10px;
-  float: right; }
-
 nav {
-  margin: 10px 0 0 0;
-  line-height: 32px; }
+  margin: 0;
+  line-height: 45px; }
   nav a {
     white-space: nowrap; }
 
-.guide_main nav a {
-  display: block;
-  width: 360px; }
-
-nav.user {
-  font-size: 0.7em; }
+.content {
+  background: #eeeeee; }
 
 .btn, nav a, input[type=submit] {
   background: white;
@@ -87,21 +105,31 @@ input[type=submit] {
   margin: 10px 0 0;
   width: auto; }
 
-.login form {
+.login_page form {
   position: relative;
   margin: 20px 0; }
-  .login form label {
+  .login_page form label {
     line-height: 40px; }
-  .login form input[type=text], .login form input[type=password] {
+  .login_page form input[type=text], .login_page form input[type=password] {
     position: absolute;
     left: 100px; }
-  .login form input[type=submit] {
+  .login_page form input[type=submit] {
     margin-left: 284px; }
 
 #bg img {
   width: 400px;
   display: block;
   padding: 5px; }
+
+.logout {
+  font-size: 0.55em;
+  float: right; }
+  .logout input {
+    margin: 0;
+    background: none;
+    border: 0; }
+    .logout input:hover {
+      border: 0; }
 
 .item img {
   width: 33%; }
@@ -133,18 +161,23 @@ input[type=submit] {
     font-size: 1.2em; }
 
 .guide_main .text p {
-  margin: 1em 0; }
+  margin: 0 0 1em; }
 .guide_main nav {
   margin: 10px 0 10px; }
+  .guide_main nav a {
+    margin: 5px 0;
+    padding-top: 0;
+    padding-bottom: 0; }
+
+.guide_main nav a {
+  display: block;
+  width: 360px; }
 
 .mini {
   font-size: 0.8em; }
 
 .spaced {
   margin: 0 0 15px 0; }
-
-.right {
-  float: right; }
 
 nav.bottom a.right {
   padding-top: 0;
@@ -179,5 +212,5 @@ img.makevoid {
   float: right; }
 
 a.debug {
-  margin: 20px 0;
-  float: right; }
+  float: right;
+  margin-top: 30px; }

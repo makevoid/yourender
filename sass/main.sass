@@ -34,6 +34,19 @@
   // FIXME: browser fallbacks
   border-radius: $amount
 
+=rounded_bottom($amount)
+  // FIXME: browser fallbacks
+  border-bottom-left-radius: $amount
+  border-bottom-right-radius: $amount
+
+=vmargin($top, $bot: $top)
+  margin-top: $top
+  margin-bottom: $bot
+
+=vpadding($top, $bot: $top)
+  padding-top: $top
+  padding-bottom: $bot
+
 // resets
 
 a
@@ -41,9 +54,24 @@ a
 
 p
   line-height: 1.2em
+  margin: 0.1em 0 1.2em
 
 *
   box-sizing: border-box
+
+html, body
+  margin: 0
+
+// utils
+
+.right
+  float: right
+
+.left
+  float: left
+
+.clear
+  clear: both
 
 // colors
 
@@ -53,18 +81,32 @@ $main: #A00
 // colors: computed
 $main_hover: $main + #222
 
+$light:  #EEE
+$medium: #DDD
+$dark:   #BBB
+
 // style
 
 body
   font-family: Georgia, sans-serif
-  background: #EEE
+  background: $medium
   margin: 0
   padding: 0
 
 #container
   margin: 0 auto
-  width: 90%
+  width: 100%
+
+
+header > h1, #container > .content
   max-width: 1000px
+  margin: 0 auto
+  padding: 3px 12px
+#container > .content
+  +vpadding(10px, 20px)
+  +rounded_bottom(20px)
+header > h1
+  +vpadding(6px, 5px)
 
 a
   color: $main
@@ -77,33 +119,25 @@ a
 
 #container > header
   width: 13em
-  +rounded(10px)
-  background: #EEE
-  margin: 10px 0 20px 0
+  margin: 0 0 0 0
+  background: $dark
+  width: 100%
   & > h1
-    margin: 0
     font-size: 1.2em
     span
       font-size: 0.8em
       display: block
 
-#container > nav
-  margin: 18px 0 10px
-  float: right
 
 nav
-  margin: 10px 0 0 0
-  line-height: 32px
+  margin: 0
+  line-height: 45px
   a
     white-space: nowrap
 
-.guide_main nav a
-  display: block
-  width: 360px
 
-nav.user
-  font-size: 0.7em
-
+.content
+  background: $light
 
 =button
   +bg(#FFF)
@@ -114,7 +148,7 @@ nav.user
   font-weight: bold
   cursor: pointer
   &:hover
-    +bg(#EEE)
+    +bg($light)
     border: 1px solid #999
 
 .btn, nav a, input[type=submit]
@@ -142,7 +176,7 @@ input[type=submit]
   margin: 10px 0 0
   width: auto
 
-.login form
+.login_page form
   position: relative
   margin: 20px 0
   label
@@ -170,6 +204,16 @@ input[type=submit]
   width: 400px
   display: block
   padding: 5px
+
+.logout
+  font-size: 0.55em
+  float: right
+  input
+    margin: 0
+    background: none
+    border: 0
+    &:hover
+      border: 0
 
 
 // pages
@@ -218,9 +262,17 @@ input[type=submit]
 
 .guide_main
   .text p
-    margin: 1em 0
+    margin: 0 0 1em
   nav
     margin: 10px 0 10px
+    a
+      margin: 5px 0
+      +vpadding(0)
+
+.guide_main nav a
+  display: block
+  width: 360px
+
 
 .mini
   font-size: 0.8em
@@ -228,8 +280,7 @@ input[type=submit]
 .spaced
   margin: 0 0 15px 0
 
-.right
-  float: right
+
 nav.bottom a.right
   padding-top: 0
   padding-bottom: 0
@@ -266,5 +317,5 @@ img.makevoid
   +padding("box")
   +right
 a.debug
-  +margin("slanted")
   +right
+  margin-top: 30px
