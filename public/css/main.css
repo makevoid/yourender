@@ -64,14 +64,23 @@ a {
       font-size: 0.8em;
       display: block; }
 
+#container > header, .content {
+  position: relative; }
+
+#container > header {
+  box-shadow: 0 0 6px #555555;
+  z-index: 3; }
+
+.content {
+  background: #eeeeee;
+  z-index: 2;
+  box-shadow: 1px 1px 10px #aaaaaa; }
+
 nav {
   margin: 0;
   line-height: 45px; }
   nav a {
     white-space: nowrap; }
-
-.content {
-  background: #eeeeee; }
 
 .btn, nav a, input[type=submit] {
   background: white;
@@ -130,6 +139,9 @@ input[type=submit] {
     border: 0; }
     .logout input:hover {
       border: 0; }
+
+.expand {
+  float: right; }
 
 .item img {
   width: 33%; }
