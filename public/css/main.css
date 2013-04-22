@@ -36,7 +36,7 @@ header > h1, #container > .content {
   padding: 3px 12px; }
 
 #container > .content {
-  padding-top: 10px;
+  padding-top: 15px;
   padding-bottom: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px; }
@@ -57,6 +57,7 @@ a {
   width: 13em;
   margin: 0 0 0 0;
   background: #bbbbbb;
+  background: -webkit-linear-gradient(top, #aaaaaa 0, #cccccc 100%);
   width: 100%; }
   #container > header > h1 {
     font-size: 1.2em; }

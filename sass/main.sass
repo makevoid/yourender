@@ -84,6 +84,10 @@ $main_hover: $main + #222
 $light:  #EEE
 $medium: #DDD
 $dark:   #BBB
+=bg_dark
+  background: $dark
+  // FIXME: all browsers gradient
+  background: -webkit-linear-gradient(top, $dark -#111 0, $dark+#111 100%)
 
 // style
 
@@ -103,7 +107,7 @@ header > h1, #container > .content
   margin: 0 auto
   padding: 3px 12px
 #container > .content
-  +vpadding(10px, 20px)
+  +vpadding(15px, 20px)
   +rounded_bottom(20px)
 header > h1
   +vpadding(6px, 5px)
@@ -120,7 +124,7 @@ a
 #container > header
   width: 13em
   margin: 0 0 0 0
-  background: $dark
+  +bg_dark
   width: 100%
   & > h1
     font-size: 1.2em
