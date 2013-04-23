@@ -15,7 +15,8 @@
               %form{ action: "/logout", method: "post" }
                 %input{ value: "Logout", type: "submit" }
           %a{ href: "/" }
-            #{TITLE}.it
+            %span.you You
+            %span.render Render
             %span.tagline= t "Create your personal render farm", "Crea la tua render farm"
       %section.content
         = yield

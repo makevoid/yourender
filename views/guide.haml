@@ -3,10 +3,8 @@
 %a.btn{ href: "/guide" } < indietro
 
 - dir = @name
-= dir
--# label = labels[name.to_sym]
-
 - dir_screen = dir.split("_")[1..-1].join("_")
+%h1= Labelize::LABELS[dir_screen.to_sym]
 
 .guide{ class: dir_screen }
 
@@ -26,7 +24,10 @@
 
 
   %nav.bottom
-    %a.btn{ href: "/guide" } < torna alle guide
-    - guide_next = Guide.new(dir).next
-    - if guide_next
-      %a.btn.right{ href: "/guides/#{guide_next.name_url}" } prossimo step  >
+    %a.btn{ href: "/guide" } < torna all'indice
+    - guide = Guide.new dir
+    - if guide.message_next # RELEASE: remove in open source relase
+      .right #{guide.message_next} >
+    - elsif guide.next
+      %a.btn.right{ href: "/guides/#{guide.next.name_url}" } prossimo step  >
+

@@ -42,8 +42,8 @@ header > h1, #container > .content {
   border-bottom-right-radius: 20px; }
 
 header > h1 {
-  padding-top: 6px;
-  padding-bottom: 5px; }
+  padding-top: 8px;
+  padding-bottom: 7px; }
 
 a {
   color: #aa0000;
@@ -56,14 +56,38 @@ a {
 #container > header {
   width: 13em;
   margin: 0 0 0 0;
-  background: #bbbbbb;
-  background: -webkit-linear-gradient(top, #aaaaaa 0, #cccccc 100%);
+  background: #bb2222;
+  background: -webkit-linear-gradient(top, #dd4444 0, #990000 100%);
   width: 100%; }
+  #container > header a, #container > header input[type=submit] {
+    color: #eeeeee;
+    background: none;
+    text-shadow: 1px 2px 0 #333333; }
+    #container > header a span, #container > header input[type=submit] span {
+      text-shadow: 1px 1px 0 #111111; }
   #container > header > h1 {
     font-size: 1.2em; }
-    #container > header > h1 span {
-      font-size: 0.8em;
-      display: block; }
+    #container > header > h1 span.you, #container > header > h1 span.render {
+      font-size: 1.2em;
+      font-family: Impact;
+      letter-spacing: 0.07em; }
+    #container > header > h1 span.you {
+      background: #770000;
+      background: -webkit-linear-gradient(top, #aa3333 0, #bb4444 20%, #660000 80%);
+      padding: 2px 6px;
+      border-radius: 9px;
+      border: 1px solid #666666;
+      border-top: 1px solid #aaaaaa;
+      border-bottom: 1px solid #444444; }
+    #container > header > h1 span.render {
+      position: relative;
+      left: -3px; }
+    #container > header > h1 span.tagline {
+      margin: 4px 0 0;
+      display: block;
+      font-size: 0.5em;
+      font-family: Helvetica, Arial, Verdana;
+      text-transform: uppercase; }
 
 #container > header, .content {
   position: relative; }
@@ -101,6 +125,9 @@ input[type=submit] {
   input[type=submit]:hover {
     color: #cc2222; }
 
+h1 {
+  font-size: 1.3em; }
+
 input, select, textarea {
   font-size: 1.1em;
   padding: 4px 8px; }
@@ -136,7 +163,6 @@ input[type=submit] {
   float: right; }
   .logout input {
     margin: 0;
-    background: none;
     border: 0; }
     .logout input:hover {
       border: 0; }
@@ -185,6 +211,15 @@ input[type=submit] {
 .guide_main nav a {
   display: block;
   width: 360px; }
+
+.guide_main nav h1 {
+  font-size: 0.95em;
+  margin: 0 0 0 13px; }
+
+.guide_main nav .half {
+  width: 130px;
+  display: inline-block;
+  text-align: center; }
 
 .mini {
   font-size: 0.8em; }

@@ -4,8 +4,20 @@
   %p Ecco i passaggi necessari spiegati nel dettaglio:
 
   %nav
-    - GUIDES.each do |guide|
+    - Guide.all.each_with_index do |guide, idx|
+      - if idx == 3
+        %h1 #{guide.id}) Installa RDP
+        %a.btn.half{ href: "/guides/#{guide.id}a_install_rdp_osx" } Mac
+        %a.btn.half{ href: "/guides/#{guide.id}b_install_rdp_win" } Windows
+      - if idx == 4
+        %h1 #{guide.id}) Connettiti con Remote Desktop
+        %a.btn.half{ href: "/guides/#{guide.id}a_connect_osx" } Mac
+        %a.btn.half{ href: "/guides/#{guide.id}b_connect_win" } Windows
+
+      - next if [3, 4].include? guide.id
       %a.btn{ href: "/guides/#{guide.name_url}" } #{guide.id}) #{label guide.name}
+
+
 
   .text
     :textile
@@ -23,7 +35,7 @@
       *legenda:*
       Server - Computer remoto accessibile tramite internet
       VM - Virtual Machine, Server virtuale, Macchina Virtuale - Un computer virtuale: le VM possiedono numerosi vantaggi in termini di gestione rispetto ai computer "standard", chiamati anche _server dedicati_.
-      Immagine Server - E' un server virtuale salvato in un file. 
+      Immagine Server - E' un server virtuale salvato in un file.
       EC2 - Elastic Compute Cloud, servizio di amazon che permette di gestire server virtuali remoti
       AMI - Immagine di un server
       RDP - Remote Desktop Protocol, sistema con cui poter connettersi a un computer remoto (sistemi simili: vnc, teamviewer...)

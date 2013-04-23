@@ -83,11 +83,12 @@ $main_hover: $main + #222
 
 $light:  #EEE
 $medium: #DDD
-$dark:   #BBB
+$dark:   #BBB // grey
+$dark:   #B22  // red
 =bg_dark
   background: $dark
   // FIXME: all browsers gradient
-  background: -webkit-linear-gradient(top, $dark -#111 0, $dark+#111 100%)
+  background: -webkit-linear-gradient(top, $dark +#222 0, $dark -#222 100%)
 
 // style
 
@@ -110,7 +111,7 @@ header > h1, #container > .content
   +vpadding(15px, 20px)
   +rounded_bottom(20px)
 header > h1
-  +vpadding(6px, 5px)
+  +vpadding(8px, 7px)
 
 a
   color: $main
@@ -120,17 +121,47 @@ a
     color: $main_hover
     text-shadow: 1px 1px 0px #FFF
 
+=tube
+  $tube_dark: $dark - #444
+  background: $tube_dark
+  // FIXME: all browsers gradient
+  background: -webkit-linear-gradient(top, $tube_dark +#333 0, $tube_dark +#444 20%, $tube_dark -#111 80%)
+  padding: 2px 6px
+  border-radius: 9px
+  border: 1px solid #666
+  border-top: 1px solid #AAA
+  border-bottom: 1px solid #444
 
 #container > header
   width: 13em
   margin: 0 0 0 0
   +bg_dark
   width: 100%
+  a, input[type=submit]
+    color: #EEE
+    background: none
+    text-shadow: 1px 2px 0 #333
+    span
+      text-shadow: 1px 1px 0 #111
   & > h1
     font-size: 1.2em
-    span
-      font-size: 0.8em
+    span.you, span.render
+      font-size: 1.2em
+      font-family: Impact
+      // font-weight: normal
+      // text-transform: uppercase
+      letter-spacing: 0.07em
+    span.you
+      +tube
+    span.render
+      position: relative
+      left: -3px
+    span.tagline
+      margin: 4px 0 0
       display: block
+      font-size: 0.5em
+      font-family: Helvetica, Arial, Verdana
+      text-transform: uppercase
 
 #container > header, .content
   position: relative
@@ -169,6 +200,9 @@ input[type=submit]
   font-weight: bold
   &:hover
     color: $main_hover
+
+h1
+  font-size: 1.3em
 
 // forms
 
@@ -220,7 +254,6 @@ input[type=submit]
   float: right
   input
     margin: 0
-    background: none
     border: 0
     &:hover
       border: 0
@@ -285,6 +318,13 @@ input[type=submit]
   display: block
   width: 360px
 
+.guide_main nav h1
+  font-size: 0.95em
+  margin: 0 0 0 13px
+.guide_main nav .half
+  width: 130px
+  display: inline-block
+  text-align: center
 
 .mini
   font-size: 0.8em

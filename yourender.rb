@@ -53,36 +53,18 @@ class Yourender < Sinatra::Base
 
   # data
 
-  def self.guides
+  def self.load_guides
     paths = Dir.glob("guides/*")
-    paths.map do |path|
+    guides = paths.map do |path|
       file  = File.basename path, ".saf"
       split = file.split "_"
       name  = split[1..-1].join("_")
       { name: name, id: split[0].to_i, name_url: file }.to_mhash # guide
     end.sort_by(&:id)
+    Guide.load guides
   end
 
-  GUIDES = guides
-
-  class Guide
-
-    def initialize(name_url)
-      @name_url = name_url
-      @current = GUIDES.find{ |guide| guide.id == get_idx }
-    end
-
-    def next
-      GUIDES[@current.id+1]
-    end
-
-    private
-
-    def get_idx
-      @name_url.split("_")[0].to_i
-    end
-
-  end
+  load_guides
 
   # paypal
 

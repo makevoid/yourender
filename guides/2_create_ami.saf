@@ -40,4 +40,4 @@ Ora clicca sul link *Istances* dal menu' a sinistra <
 33: Premi il bottone *Decrypt Password*
 34: Nel campo password apparira' la password del server, scrivila in un posto sicuro, sara' la password di tutti i server che andrai a lanciare in futuro.
 35> Clicca sul link *Download shortcut file*, verra' scaricato un file RDP da cui potrai connetterti al server. A questo punto dovrai scaricare il software di *RDP* (Remote Desktop Protocol / Connection) 
-Prosegui seguendo la "guida per Mac":/guides/3b_install_rdp_osx o la "guida per Windows":/guides/3b_install_rdp_win, se hai Linux scarica il pacchetto "rdesktop":http://www.rdesktop.org/ e salta alla prossima sezione.<
+Prosegui seguendo la "guida per Mac":/guides/3a_install_rdp_osx o la "guida per Windows":/guides/3b_install_rdp_win, se hai Linux scarica il pacchetto "rdesktop":http://www.rdesktop.org/ e salta alla prossima sezione.<
