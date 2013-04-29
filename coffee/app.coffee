@@ -1,6 +1,7 @@
 $ -> # main
-  $(".expand").on "click", expand_content_width
+  $(document).foundation()
 
+  $(".expand").on "click", expand_content_width
 
 # functions
 
@@ -14,3 +15,4 @@ expand_content_width = ->
     cont.css "max-width", "100%"
   else
     cont.css "max-width", last_width
+

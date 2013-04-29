@@ -2,6 +2,7 @@
   var expand_content_width, last_width;
 
   $(function() {
+    $(document).foundation();
     return $(".expand").on("click", expand_content_width);
   });
 

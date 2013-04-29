@@ -9,8 +9,15 @@
   :textile
     h1. Cos'e' YouRender:
 
-    E' la *guida* per creare la tua render farm personale, per effettuare render quando vuoi, in poco tempo, limitando i costi! 
-    
+    E' la *guida* per creare la tua render farm personale, per effettuare render quando vuoi, in poco tempo, limitando i costi!
+
+  %ul{ :"data-options" => "bullets: false; timer_speed: 4000; animation_speed: 500", :"data-orbit" => ""}
+    - photos = Dir.glob("./public/img/examples/*").reverse
+    - photos.each do |photo|
+      %li
+        %img{ src: "/img/examples/#{File.basename photo}" }
+
+
 
   %nav
     %a.btn{ href: "/contents" } Contenuti della guida
@@ -21,8 +28,17 @@
   %p
     %a.btn.buy{ href: buy_link } Acquista la guida! (10€)
 
+
+  - icons = Dir.glob("./public/img/icons/*.png")
+  .icons
+    - icons.each do |icon|
+      - name = File.basename icon
+      %img{ src: "/img/icons/#{name}" }
+
 .cont_right
   .spaced
     %a.btn.buy{ href: buy_link } Acquista la guida! (10€)
 
   = partial :photos
+
+
