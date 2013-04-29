@@ -1,10 +1,7 @@
 <!-- **YouRender** e' una guida che ti spiega come affittare a ore dei computer molto potenti per effettuare i tuoi render!
 !-->
 
-h1. Cos'e' YouRender:
-
-E' la *guida* per creare la tua render farm personale, per effettuare render quando vuoi, in poco tempo, limitando i costi! 
-
+TODO: delete me 
 
 <!--  ..ti permette di renderizzare su server molto potenti, da subito!  !-->
 

@@ -1,8 +1,51 @@
-1: Abilitare i siti da visitare su IE
-2: Scaricare Firefox e impostarlo come browser personalizzato
-3: Installare 7Zip 
-4: Scaricare un software 3D (Blender)
-5: Inviarsi un file del progetto (tramite email e wetransfer) 
-6: Effettuare il render di prova
-7: Creare un'immagine (AMI)
-8: Terminare il server
+1>
+In questa sezione della guida e' illustrato come:
+- Abilitare i siti da visitare su IE
+- Scaricare Firefox e impostarlo come browser personalizzato
+- Installare 7Zip 
+- Scaricare un software 3D (Blender)
+- Inviarsi un file del progetto (tramite email e wetransfer) 
+- Effettuare il render di prova
+- Creare un'immagine (AMI)
+- Terminare il server
+
+Per prima cosa clicca sull'icona di File Explorer
+<
+2: Inserisci nella barra l'indirizzo: *http://mozilla.org*
+3: Si aprira' una finestra (Internet Explorer blocca tutti gli indirizzi di default, per questo stiamo scaricando Firefox). Clicca su *Add..*
+4: Clicca su Add
+5: e poi Close
+6: Si aprira' un'altra finestra di blocco, clicca su Add, Add, e Close anche per questa
+7: Clicca sul tasto di download per Windows
+8: Scegli OK
+9: nuovamente Add, Add e Close 
+10: Clicca nuovamente sul tasto di download per Windows
+11: Premi Run dalla barra in basso
+12: Al termine dello scaricamento, si aprira' l'installer di Firefox, clicca su *Next >* fino alla fine dell'installazione, scegliendo tutte le opzioni di default
+13: Clicca su Finish
+14: Imposta Firefox come browser predefinito
+15: (di nuovo...)
+16: digita *7zip* nella barra di ricerca e premi invio
+17: clicca sul link *Download*
+18: e scarica il file *msi*
+19: salvalo
+20: aprilo
+21: ...
+22: effettua l'installazione (tutte le opzioni di default vanno bene)
+23: premi Finish
+24>
+A questo punto devi scaricare e installare il programma di rendering (e plugin, se li usi) prima di salvare l'immagine server
+
+Di seguito e' spiegato come si scarica e installa Blender, se non usi Blender puoi andare direttamente al "prossimo capitolo":/guides/6_terminate_instance
+
+Se lo usi, cerca Blender su google e clicca il bottone Download<
+25: Clicca su Germany
+26: Apri Blender
+27: Installa Blender cliccando sul bottone *Next >* e tieni selezionate le opzioni di default
+28> 
+Alla fine dell'installazione si aprira' Blender
+
+A questo punto inviati per email/wetransfer un file di un tuo progetto, prova a renderizzartelo e controlla che vada tutto bene.
+
+Se e' tutto a posto allora passa al prossimo step, dove creerai l'immagine server.
+<

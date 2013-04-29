@@ -101,6 +101,7 @@ body
 #container
   margin: 0 auto
   width: 100%
+  padding-bottom: 30px
 
 
 header > h1, #container > .content
@@ -108,8 +109,8 @@ header > h1, #container > .content
   margin: 0 auto
   padding: 3px 12px
 #container > .content
-  +vpadding(15px, 20px)
-  +rounded_bottom(20px)
+  +vpadding(15px, 30px)
+  +rounded_bottom(16px)
 header > h1
   +vpadding(8px, 7px)
 
@@ -127,7 +128,7 @@ a
   // FIXME: all browsers gradient
   background: -webkit-linear-gradient(top, $tube_dark +#333 0, $tube_dark +#444 20%, $tube_dark -#111 80%)
   padding: 2px 6px
-  border-radius: 9px
+  +rounded(9px)
   border: 1px solid #666
   border-top: 1px solid #AAA
   border-bottom: 1px solid #444
@@ -231,19 +232,6 @@ input[type=submit]
   input[type=submit]
     margin-left: 284px
 
-
-//  .content
-//    background: rgba(120,120,120, 0.5)
-//
-//  #container
-//    position: absolute
-//    z-index: 2
-//    color: #FFF
-//
-//  #bg
-//    z-index: 1
-//    position: absolute
-
 #bg img
   width: 400px
   display: block
@@ -261,8 +249,8 @@ input[type=submit]
 .expand
   float: right
 
-// pages
 
+// pages
 
 .item
   img
@@ -294,16 +282,6 @@ input[type=submit]
     padding: 5px 5px 8px 8px
     font-size: 1.2em
 
-
-
-
-
-//  .guide.create_ami
-//    img
-//      width: 110%
-//      position: relative
-//      left: -4%
-//      box-shadow: none
 
 .guide_main
   .text p
@@ -368,6 +346,10 @@ img.makevoid
   +bg(#FFF)
   +padding("box")
   +right
+  +rounded(8px)
+  border: 1px solid #999
+  box-shadow: 1px 1px 8px #999
+  margin: -100px 8px 0 0
 a.debug
   +right
-  margin-top: 30px
+  margin-top: 40px

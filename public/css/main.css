@@ -28,7 +28,8 @@ body {
 
 #container {
   margin: 0 auto;
-  width: 100%; }
+  width: 100%;
+  padding-bottom: 30px; }
 
 header > h1, #container > .content {
   max-width: 1000px;
@@ -37,9 +38,9 @@ header > h1, #container > .content {
 
 #container > .content {
   padding-top: 15px;
-  padding-bottom: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px; }
+  padding-bottom: 30px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px; }
 
 header > h1 {
   padding-top: 8px;
@@ -257,8 +258,12 @@ img.makevoid {
   display: none;
   background: white;
   padding: 20px 2%;
-  float: right; }
+  float: right;
+  border-radius: 8px;
+  border: 1px solid #999999;
+  box-shadow: 1px 1px 8px #999999;
+  margin: -100px 8px 0 0; }
 
 a.debug {
   float: right;
-  margin-top: 30px; }
+  margin-top: 40px; }

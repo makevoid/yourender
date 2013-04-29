@@ -10,10 +10,21 @@ class Guide
   end
 
   def next
-    guide = @@guides[@current.id+1]
+    id = @current.id
+    guide = @@guides[id]
+
+
+    new_id = case id
+      when 3 then 4 # 3a
+      when 4 then 6 # 3b
+      when 5 then 7 # 4a
+      when 6 then 7 # 4b
+    end
+    guide = @@guides[new_id] if new_id
+
     # RELEASE: remove in open source relase
-    guide = @@guides[@current.id+2] if guide.name_url[1] == "b"
-    guide = @@guides[@current.id+2] if guide.name_url == "4a_connect_osx"
+    # guide = @@guides[@current.id+1] if guide.name_url[1] == "a"
+    # guide = @@guides[@current.id+2] if guide.name_url == "4a_connect_osx"
     next_guide = Guide.new guide.name_url
     if next_guide.id == 4
       url = next_guide.os == "osx" ? "4a_connect_osx" : "4b_connect_win"
