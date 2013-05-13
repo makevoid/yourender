@@ -7,7 +7,12 @@ YouRender.it
 
 <http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami.html>
 
+todo:
 
+activate beta tester accounts:
+
+setticristina
+diego.detassis
 
 ---
 
