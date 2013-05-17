@@ -95,6 +95,9 @@ textarea {
 select {
   width: 100%; }
 
+a {
+  text-decoration: none; }
+
 .orbit-container {
   overflow: hidden;
   width: 50%;
